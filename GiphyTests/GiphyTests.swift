@@ -6,7 +6,9 @@
 //  Copyright © 2019 Denis Romashov. All rights reserved.
 //
 
+//import Alamofire
 import XCTest
+
 @testable import Giphy
 
 class GiphyTests: XCTestCase {

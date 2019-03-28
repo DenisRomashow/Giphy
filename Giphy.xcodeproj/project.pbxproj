@@ -11,7 +11,6 @@
 		6B8AB56D224CD46D00A1D06A /* Giphy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AB56C224CD46D00A1D06A /* Giphy.swift */; };
 		6B8AB572224CDB7900A1D06A /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AB571224CDB7900A1D06A /* Requester.swift */; };
 		6B8AB574224CDC8500A1D06A /* APIConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AB573224CDC8500A1D06A /* APIConfigs.swift */; };
-		6B8AB578224CDD2500A1D06A /* DictinaryEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AB577224CDD2500A1D06A /* DictinaryEx.swift */; };
 		6BBCC2CE224CE22300D0AF8E /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBCC2CD224CE22300D0AF8E /* Communicator.swift */; };
 		6BBCC2D0224D011800D0AF8E /* GiphyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBCC2CF224D011800D0AF8E /* GiphyImage.swift */; };
 		6BBCC2D5224D03D600D0AF8E /* GiphyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBCC2D3224D03D600D0AF8E /* GiphyCollectionViewCell.swift */; };
@@ -38,7 +37,6 @@
 		6B8AB56C224CD46D00A1D06A /* Giphy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Giphy.swift; sourceTree = "<group>"; };
 		6B8AB571224CDB7900A1D06A /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
 		6B8AB573224CDC8500A1D06A /* APIConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfigs.swift; sourceTree = "<group>"; };
-		6B8AB577224CDD2500A1D06A /* DictinaryEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictinaryEx.swift; sourceTree = "<group>"; };
 		6BBCC2CD224CE22300D0AF8E /* Communicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
 		6BBCC2CF224D011800D0AF8E /* GiphyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyImage.swift; sourceTree = "<group>"; };
 		6BBCC2D3224D03D600D0AF8E /* GiphyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -115,10 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				6BFF0A2E224CABF900F3B187 /* AppDelegate.swift */,
-				6B8AB576224CDD0E00A1D06A /* Common */,
-				6B8AB570224CDB6300A1D06A /* Network */,
 				6B8AB567224CCD2D00A1D06A /* Controller */,
 				6B8AB56A224CCD4900A1D06A /* Model */,
+				6B8AB570224CDB6300A1D06A /* Network */,
 				6B8AB569224CCD4300A1D06A /* View */,
 			);
 			path = Code;
@@ -132,22 +129,6 @@
 				6BBCC2CD224CE22300D0AF8E /* Communicator.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		6B8AB575224CDD0100A1D06A /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				6B8AB577224CDD2500A1D06A /* DictinaryEx.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		6B8AB576224CDD0E00A1D06A /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				6B8AB575224CDD0100A1D06A /* Extensions */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		6BBCC2D1224D03B200D0AF8E /* Cell */ = {
@@ -165,6 +146,14 @@
 				6BBCC2D4224D03D600D0AF8E /* GiphyCollectionViewCell.xib */,
 			);
 			path = GiphyCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		6BBCC2DE224D8F0900D0AF8E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6BFF0A35224CABFA00F3B187 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		6BFF0A22224CABF900F3B187 = {
@@ -191,8 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				6BFF0A3A224CABFA00F3B187 /* Info.plist */,
-				6BFF0A35224CABFA00F3B187 /* Assets.xcassets */,
 				6B8AB56B224CCD7000A1D06A /* Code */,
+				6BBCC2DE224D8F0900D0AF8E /* Resources */,
 				6B8AB568224CCD3800A1D06A /* Storyboards */,
 			);
 			path = Giphy;
@@ -353,7 +342,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BBCC2D5224D03D600D0AF8E /* GiphyCollectionViewCell.swift in Sources */,
-				6B8AB578224CDD2500A1D06A /* DictinaryEx.swift in Sources */,
 				6BFF0A31224CABF900F3B187 /* SearchGifsViewController.swift in Sources */,
 				6BBCC2CE224CE22300D0AF8E /* Communicator.swift in Sources */,
 				6B8AB56D224CD46D00A1D06A /* Giphy.swift in Sources */,

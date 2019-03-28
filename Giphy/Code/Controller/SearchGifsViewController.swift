@@ -71,7 +71,7 @@ extension SearchGifsViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if  gifs.count < totalCount && indexPath.item == gifs.count-1 && searchBar.text?.isEmpty == false {
             loadMoreGifs()
-        } else { }
+        }
     }
 }
 
