@@ -76,11 +76,9 @@ extension SearchGifsViewController: UICollectionViewDelegate, UICollectionViewDa
 }
 
 extension SearchGifsViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        guard let searchText = searchBar.text else { return }
         searchGif(text: searchText)
-    }
-    
-    func searchBarResultsListButtonClicked(_ searchBar: UISearchBar) {
-        
     }
 }
