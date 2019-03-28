@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n8s-72-PXZ">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Giphy-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Giphy" id="BYZ-38-t0r" customClass="SearchGifsViewController" customModule="Giphy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jw8-7K-Tas">
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R7U-eh-9Pz">
+                                    <size key="itemSize" width="90" height="90"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="34"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GiphyCollectionViewCell" id="wJa-eJ-hPG">
+                                        <rect key="frame" x="8" y="8" width="90" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="tnK-Yu-UWd"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0FU-Fy-V4e"/>
+                                </connections>
+                            </collectionView>
+                            <searchBar contentMode="redraw" placeholder="Search in giphy.com" translatesAutoresizingMaskIntoConstraints="NO" id="FWd-Y4-AUf">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pux-Ms-48q"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jw8-7K-Tas" secondAttribute="trailing" id="Ego-R0-6kV"/>
+                            <constraint firstItem="jw8-7K-Tas" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KBt-1m-Vel"/>
+                            <constraint firstItem="jw8-7K-Tas" firstAttribute="top" secondItem="FWd-Y4-AUf" secondAttribute="bottom" id="Spi-dz-WNq"/>
+                            <constraint firstItem="FWd-Y4-AUf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VcE-hP-aUw"/>
+                            <constraint firstItem="FWd-Y4-AUf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gkg-V7-dq4"/>
+                            <constraint firstItem="FWd-Y4-AUf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oG6-q1-igd"/>
+                            <constraint firstAttribute="bottom" secondItem="jw8-7K-Tas" secondAttribute="bottom" id="xja-es-fTz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Giphy" id="IV5-ak-KTL"/>
+                    <connections>
+                        <outlet property="collectionView" destination="jw8-7K-Tas" id="Pbe-Qc-eUt"/>
+                        <outlet property="searchBar" destination="FWd-Y4-AUf" id="qxC-DQ-pWa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Txg-oW-JL5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n8s-72-PXZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FF7-na-5qe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XVd-Df-yQ1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bum-Vd-5ea" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="138"/>
+        </scene>
+    </scenes>
+</document>
