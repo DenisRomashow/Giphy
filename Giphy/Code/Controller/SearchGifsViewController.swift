@@ -30,14 +30,16 @@ extension SearchGifsViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 50
         return gifs.count
     }
 }
 
 extension SearchGifsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        Communicator.gifs(search: searchText)
+        Communicator.gifs(search: searchText, completion: { [weak self] (response) in
+            self?.gifs = response
+            self?.collectionView.reloadData()
+        })
     }
     
     func searchBarResultsListButtonClicked(_ searchBar: UISearchBar) {

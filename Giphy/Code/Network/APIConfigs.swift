@@ -30,6 +30,10 @@ public struct APIConfigs {
         return "FjfZ2BL5R2FZG8uYk73Ww453OBDvaP5y"
     }
     
+    static var limit: Int {
+        return 50
+    }
+    
     static var header: [String: String] {
 //        return ["Authorization": Session.accessToken ?? ""],
         return ["Content-Type": "text/json"]

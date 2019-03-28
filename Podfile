@@ -4,5 +4,6 @@ use_modular_headers!
 target 'Giphy' do
 
 pod 'Alamofire'
+pod 'ObjectMapper'
 
 end

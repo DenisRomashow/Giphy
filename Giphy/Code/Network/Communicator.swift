@@ -8,19 +8,29 @@
 
 import Foundation
 import Alamofire
+import ObjectMapper
 
 class Communicator: NSObject {
     private class func sendRequest(request: String, method: Alamofire.HTTPMethod, parameters: Parameters? = nil, headers: Bool = false, completion: @escaping([String: Any]) -> Void, failure: EmptyBlock? = nil) {
         Requester.sendRequest(request: request, method: method, parameters: parameters, headers: headers, completion: completion, failure: failure)
     }
 
-    class func gifs(search: String, page: Int = 1) {
+    class func gifs(search: String, page: Int = 1, completion: @escaping (([Giphy]) -> Void)) {
         let request = APIConfigs.request(part: "gifs/search")
         let parameters: [String: Any] = ["api_key": APIConfigs.apiKey,
                                          "q": search,
+                                         "limit" : APIConfigs.limit,
                                          "offset" : page]
         sendRequest(request: request, method: .get, parameters: parameters, completion: { (response) in
-            print(response["data"])
+            let dataResponse = response["data"] as? [[String : Any]] ?? []
+            var gifs = [Giphy]()
+            
+            dataResponse.forEach({ (item) in
+                if let giphy = Mapper<Giphy>().map(JSON: item) {
+                    gifs.append(giphy)
+                }
+            })
+            completion(gifs)
         }, failure: { () in
             
         })
