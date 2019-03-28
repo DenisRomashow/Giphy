@@ -37,7 +37,7 @@ extension SearchGifsViewController: UICollectionViewDelegate, UICollectionViewDa
 
 extension SearchGifsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+        Communicator.gifs(search: searchText)
     }
     
     func searchBarResultsListButtonClicked(_ searchBar: UISearchBar) {

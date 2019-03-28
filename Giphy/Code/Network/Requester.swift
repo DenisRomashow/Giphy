@@ -10,6 +10,10 @@ import Foundation
 import Alamofire
 import SystemConfiguration
 
+typealias EmptyBlock = (() -> ())
+typealias ResponseBlock = (([String: Any]) -> Void)
+
+
 class Requester: NSObject {
     
     static let shared = Requester()
@@ -27,25 +31,14 @@ class Requester: NSObject {
         return shared.sessionManager
     }
     
-    class func sendRequest(request requestPath: String, method: Alamofire.HTTPMethod, parameters: Parameters? = nil, headers: Bool = false, completion: @escaping([String: Any]) -> Void) {
-        let encoding: ParameterEncoding = URLEncoding.httpBody
-        let checkHeaders = APIConfigs.header //headers ? APIConfigs.header : nil
+    class func sendRequest(request: String, method: Alamofire.HTTPMethod, parameters: Parameters? = nil, headers: Bool = false, completion: @escaping ResponseBlock, failure: EmptyBlock? = nil) {
+        let encoding: ParameterEncoding = method == .get ? URLEncoding.default : JSONEncoding.default
+        let checkHeaders = headers ? APIConfigs.header : nil
         
-        var request = URLRequest(url: URL(string: requestPath)!)
-        request.httpMethod = method.rawValue
-        request.setValue("text/json", forHTTPHeaderField: "Content-Type")
-        let pjson = parameters?.json
-        let data = (pjson?.data(using: .utf8))! as Data
-        
-        request.httpBody = data
-        
-        manager.request(request).responseJSON { (response) in
+        manager.request(request, method: method, parameters: parameters, encoding: encoding, headers: checkHeaders).responseJSON(completionHandler: { response in
             guard let dictionary = response.result.value as? [String : AnyObject] else { return }
-            
-//            ResponseValidator.checkResponse(response: response, completion: { response in
-                completion(dictionary)
-//            })
-        }
+            completion(dictionary)
+        })
     }
     
 }

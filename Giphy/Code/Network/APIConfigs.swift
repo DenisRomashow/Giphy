@@ -23,7 +23,7 @@ public struct APIConfigs {
     }
 
     static var apiPrefix: String {
-        return "https://api.giphy.com/"
+        return "https://api.giphy.com/v1/"
     }
 
     static var apiKey: String {
@@ -38,7 +38,4 @@ public struct APIConfigs {
     static func request(part: String) -> String {
         return "\(apiPrefix)\(part)"
     }
-
-    
-
 }

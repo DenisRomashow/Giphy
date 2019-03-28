@@ -12,6 +12,7 @@
 		6B8AB572224CDB7900A1D06A /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AB571224CDB7900A1D06A /* Requester.swift */; };
 		6B8AB574224CDC8500A1D06A /* APIConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AB573224CDC8500A1D06A /* APIConfigs.swift */; };
 		6B8AB578224CDD2500A1D06A /* DictinaryEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AB577224CDD2500A1D06A /* DictinaryEx.swift */; };
+		6BBCC2CE224CE22300D0AF8E /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBCC2CD224CE22300D0AF8E /* Communicator.swift */; };
 		6BFF0A2F224CABF900F3B187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFF0A2E224CABF900F3B187 /* AppDelegate.swift */; };
 		6BFF0A31224CABF900F3B187 /* SearchGifsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFF0A30224CABF900F3B187 /* SearchGifsViewController.swift */; };
 		6BFF0A34224CABF900F3B187 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BFF0A32224CABF900F3B187 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		6B8AB571224CDB7900A1D06A /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
 		6B8AB573224CDC8500A1D06A /* APIConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfigs.swift; sourceTree = "<group>"; };
 		6B8AB577224CDD2500A1D06A /* DictinaryEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictinaryEx.swift; sourceTree = "<group>"; };
+		6BBCC2CD224CE22300D0AF8E /* Communicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
 		6BFF0A2B224CABF900F3B187 /* Giphy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giphy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BFF0A2E224CABF900F3B187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BFF0A30224CABF900F3B187 /* SearchGifsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGifsViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			children = (
 				6B8AB573224CDC8500A1D06A /* APIConfigs.swift */,
 				6B8AB571224CDB7900A1D06A /* Requester.swift */,
+				6BBCC2CD224CE22300D0AF8E /* Communicator.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			files = (
 				6B8AB578224CDD2500A1D06A /* DictinaryEx.swift in Sources */,
 				6BFF0A31224CABF900F3B187 /* SearchGifsViewController.swift in Sources */,
+				6BBCC2CE224CE22300D0AF8E /* Communicator.swift in Sources */,
 				6B8AB56D224CD46D00A1D06A /* Giphy.swift in Sources */,
 				6B8AB572224CDB7900A1D06A /* Requester.swift in Sources */,
 				6B8AB574224CDC8500A1D06A /* APIConfigs.swift in Sources */,
