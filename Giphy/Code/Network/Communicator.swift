@@ -15,22 +15,15 @@ class Communicator: NSObject {
         Requester.sendRequest(request: request, method: method, parameters: parameters, headers: headers, completion: completion, failure: failure)
     }
 
-    class func gifs(search: String, page: Int = 1, completion: @escaping (([Giphy]) -> Void)) {
+    class func gifs(search: String, page: Int = 1, completion: @escaping ((Giphy) -> Void)) {
         let request = APIConfigs.request(part: "gifs/search")
         let parameters: [String: Any] = ["api_key": APIConfigs.apiKey,
                                          "q": search,
                                          "limit" : APIConfigs.limit,
                                          "offset" : page]
         sendRequest(request: request, method: .get, parameters: parameters, completion: { (response) in
-            let dataResponse = response["data"] as? [[String : Any]] ?? []
-            var gifs = [Giphy]()
-            
-            dataResponse.forEach({ (item) in
-                if let giphy = Mapper<Giphy>().map(JSON: item) {
-                    gifs.append(giphy)
-                }
-            })
-            completion(gifs)
+            let giphy = Giphy(json: response)
+            completion(giphy)
         }, failure: { () in
             
         })
