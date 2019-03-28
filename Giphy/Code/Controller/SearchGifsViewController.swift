@@ -14,7 +14,7 @@ class SearchGifsViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var currentPage: Int = 1
+    var currentPage: Int = 0
     var totalCount: Int = 0
     var gifs = [GiphyData]()
     
