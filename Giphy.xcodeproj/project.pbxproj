@@ -14,6 +14,8 @@
 		6B8AB578224CDD2500A1D06A /* DictinaryEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AB577224CDD2500A1D06A /* DictinaryEx.swift */; };
 		6BBCC2CE224CE22300D0AF8E /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBCC2CD224CE22300D0AF8E /* Communicator.swift */; };
 		6BBCC2D0224D011800D0AF8E /* GiphyImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBCC2CF224D011800D0AF8E /* GiphyImage.swift */; };
+		6BBCC2D5224D03D600D0AF8E /* GiphyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBCC2D3224D03D600D0AF8E /* GiphyCollectionViewCell.swift */; };
+		6BBCC2D6224D03D600D0AF8E /* GiphyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BBCC2D4224D03D600D0AF8E /* GiphyCollectionViewCell.xib */; };
 		6BFF0A2F224CABF900F3B187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFF0A2E224CABF900F3B187 /* AppDelegate.swift */; };
 		6BFF0A31224CABF900F3B187 /* SearchGifsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BFF0A30224CABF900F3B187 /* SearchGifsViewController.swift */; };
 		6BFF0A34224CABF900F3B187 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BFF0A32224CABF900F3B187 /* Main.storyboard */; };
@@ -39,6 +41,8 @@
 		6B8AB577224CDD2500A1D06A /* DictinaryEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictinaryEx.swift; sourceTree = "<group>"; };
 		6BBCC2CD224CE22300D0AF8E /* Communicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
 		6BBCC2CF224D011800D0AF8E /* GiphyImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyImage.swift; sourceTree = "<group>"; };
+		6BBCC2D3224D03D600D0AF8E /* GiphyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyCollectionViewCell.swift; sourceTree = "<group>"; };
+		6BBCC2D4224D03D600D0AF8E /* GiphyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiphyCollectionViewCell.xib; sourceTree = "<group>"; };
 		6BFF0A2B224CABF900F3B187 /* Giphy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giphy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BFF0A2E224CABF900F3B187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BFF0A30224CABF900F3B187 /* SearchGifsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGifsViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 		6B8AB569224CCD4300A1D06A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6BBCC2D1224D03B200D0AF8E /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -143,6 +148,23 @@
 				6B8AB575224CDD0100A1D06A /* Extensions */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		6BBCC2D1224D03B200D0AF8E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6BBCC2D2224D03C000D0AF8E /* GiphyCollectionViewCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6BBCC2D2224D03C000D0AF8E /* GiphyCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6BBCC2D3224D03D600D0AF8E /* GiphyCollectionViewCell.swift */,
+				6BBCC2D4224D03D600D0AF8E /* GiphyCollectionViewCell.xib */,
+			);
+			path = GiphyCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		6BFF0A22224CABF900F3B187 = {
@@ -284,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BBCC2D6224D03D600D0AF8E /* GiphyCollectionViewCell.xib in Resources */,
 				6BFF0A39224CABFA00F3B187 /* LaunchScreen.storyboard in Resources */,
 				6BFF0A36224CABFA00F3B187 /* Assets.xcassets in Resources */,
 				6BFF0A34224CABF900F3B187 /* Main.storyboard in Resources */,
@@ -329,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BBCC2D5224D03D600D0AF8E /* GiphyCollectionViewCell.swift in Sources */,
 				6B8AB578224CDD2500A1D06A /* DictinaryEx.swift in Sources */,
 				6BFF0A31224CABF900F3B187 /* SearchGifsViewController.swift in Sources */,
 				6BBCC2CE224CE22300D0AF8E /* Communicator.swift in Sources */,
@@ -500,6 +524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RWPK85BP9;
 				INFOPLIST_FILE = Giphy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -518,6 +543,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RWPK85BP9;
 				INFOPLIST_FILE = Giphy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
