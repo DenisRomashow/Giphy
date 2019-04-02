@@ -1,0 +1,9 @@
+included: # paths to include during linting. `--path` is ignored if present.
+  - Giphy
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Carthage
+  - Pods
+file_length:
+  warning: 500
+  error: 1200
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown)
