@@ -10,25 +10,25 @@ import UIKit
 import AVKit
 
 class SearchGifsViewController: UIViewController {
-    
+
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
+
     var currentPage: Int = 0
     var totalCount: Int = 0
     var gifs = [GiphyData]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let identifier = String(describing: GiphyCollectionViewCell.self)
         collectionView.register(UINib(nibName: identifier, bundle: nil), forCellWithReuseIdentifier: identifier)
     }
-    
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         view.endEditing(true)
     }
-    
+
     private func searchGif(text: String) {
         Communicator.gifs(search: text, completion: { [weak self] (giphy) in
             self?.currentPage = 1
@@ -37,7 +37,7 @@ class SearchGifsViewController: UIViewController {
             self?.collectionView.reloadData()
         })
     }
-    
+
     private func loadMoreGifs() {
         currentPage += 1
         Communicator.gifs(search: searchBar.text!, page: currentPage) { (giphy) in
@@ -60,14 +60,14 @@ extension SearchGifsViewController: UICollectionViewDelegate, UICollectionViewDa
         } else {
             cell.backgroundColor = UIColor.black
         }
-        
+
         return cell
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return gifs.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if  gifs.count < totalCount && indexPath.item == gifs.count-1 && searchBar.text?.isEmpty == false {
             loadMoreGifs()

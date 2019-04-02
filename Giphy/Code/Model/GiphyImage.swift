@@ -12,15 +12,14 @@ import ObjectMapper
 struct GiphyImage: Mappable {
     var url = ""
     var mp4 = ""
-    
+
     init?(map: Map) {
-        
+
     }
-    
+
     mutating func mapping(map: Map) {
         url <- map["url"]
         mp4 <- map["mp4"]
     }
-    
-    
+
 }

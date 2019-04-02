@@ -19,14 +19,14 @@ class Communicator: NSObject {
         let request = APIConfigs.request(part: "gifs/search")
         let parameters: [String: Any] = ["api_key": APIConfigs.apiKey,
                                          "q": search,
-                                         "limit" : APIConfigs.limit,
-                                         "offset" : page]
+                                         "limit": APIConfigs.limit,
+                                         "offset": page]
         sendRequest(request: request, method: .get, parameters: parameters, completion: { (response) in
             let giphy = Giphy(json: response)
             completion(giphy)
         }, failure: { () in
-            
+
         })
-        
+
     }
 }
